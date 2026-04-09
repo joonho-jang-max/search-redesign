@@ -923,8 +923,8 @@ function Badge({ className, property1 = "up" }: BadgeProps) {
 
 export default function Component() {
   return (
-    <div className="bg-[var(--ios_color\/bg\/b09,#f7f7f7)] relative size-full" data-name="홈 > 지금 뜨는 작품" data-node-id="1:2077">
-      <div className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[20px] items-start left-1/2 top-[130px] w-[375px]" data-name="Content" data-node-id="1:2078">
+    <div className="bg-[#f7f7f7] relative min-h-screen w-full" data-name="홈 > 지금 뜨는 작품" data-node-id="1:2077">
+      <div className="mx-auto flex flex-col gap-[20px] items-start mt-[130px] max-w-[375px] w-full" data-name="Content" data-node-id="1:2078">
         <div className="h-[264px] overflow-clip relative shrink-0 w-full" data-name="Benefit" data-node-id="1:2079">
           <div className="-translate-y-1/2 absolute content-stretch flex flex-col items-center left-0 pt-[8px] right-0 top-1/2" data-name="Content" data-node-id="I1:2079;8317:302197">
             <div className="content-stretch flex gap-[8px] items-start justify-center relative shrink-0 w-full" data-name="IMG" data-node-id="I1:2079;8334:187416">
@@ -1082,7 +1082,7 @@ export default function Component() {
                           <img alt="" className="absolute block max-w-none size-full" src={imgRankUp} />
                         </div>
                       </div>
-                      <p className="font-[family-name:var(--family,'Pretendard:Bold',sans-serif)] font-[var(--wieght\/700,normal)] leading-[var(--line-height\/10,13px)] relative shrink-0 text-[10px] text-[color:var(--ios_color\/primary\/p04,#ff2f5d)] whitespace-nowrap" data-node-id="I1:2084;1776:8571;1719:15849;96:4606">
+                      <p className="font-[family-name:var(--family,'Pretendard:Bold',sans-serif)] font-bold leading-[var(--line-height\/10,13px)] relative shrink-0 text-[10px] text-[color:var(--ios_color\/primary\/p04,#ff2f5d)] whitespace-nowrap" data-node-id="I1:2084;1776:8571;1719:15849;96:4606">
                         20
                       </p>
                     </div>
@@ -1091,16 +1091,16 @@ export default function Component() {
                     <div className="content-stretch flex flex-col gap-px items-start relative shrink-0 w-[109px]" data-name="Layout" data-node-id="I1:2084;1776:7385;1719:15843">
                       <div className="content-stretch flex gap-[3px] items-center relative shrink-0 w-full" data-node-id="I1:2084;1776:7385;1719:15843;1719:15852">
                         <Badge className="relative shrink-0 size-[14px]" property1="19+" />
-                        <p className="font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-[var(--wieght\/500,normal)] leading-[var(--line-height\/13,17px)] overflow-hidden relative shrink-0 text-[13px] text-[color:var(--ios_color\/text\/t01,#121212)] text-ellipsis tracking-[-0.15px] w-[81px] whitespace-nowrap" data-node-id="I1:2084;1776:7385;1719:15843;1719:15855">
+                        <p className="font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-medium leading-[var(--line-height\/13,17px)] overflow-hidden relative shrink-0 text-[13px] text-[color:var(--ios_color\/text\/t01,#121212)] text-ellipsis tracking-[-0.15px] w-[81px] whitespace-nowrap" data-node-id="I1:2084;1776:7385;1719:15843;1719:15855">
                           게임속 바바리안
                         </p>
                       </div>
-                      <p className="font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-[var(--wieght\/500,normal)] leading-[var(--line-height\/13,17px)] overflow-hidden relative shrink-0 text-[13px] text-[color:var(--ios_color\/text\/t01,#121212)] text-ellipsis tracking-[-0.15px] w-full whitespace-nowrap" data-node-id="I1:2084;1776:7385;1719:15843;1719:15856">
+                      <p className="font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-medium leading-[var(--line-height\/13,17px)] overflow-hidden relative shrink-0 text-[13px] text-[color:var(--ios_color\/text\/t01,#121212)] text-ellipsis tracking-[-0.15px] w-full whitespace-nowrap" data-node-id="I1:2084;1776:7385;1719:15843;1719:15856">
                         으로 살아남기
                       </p>
                     </div>
                     <div className="h-[14px] relative shrink-0 w-[78.969px]" data-name="sub info" data-node-id="I1:2084;1776:7385;1719:15844">
-                      <p className="absolute font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-[var(--wieght\/500,normal)] inset-0 leading-[var(--line-height\/11,14px)] text-[11px] text-[color:var(--ios_color\/text\/t16,#00a555)] whitespace-nowrap" data-node-id="I1:2084;1776:7385;1719:15844;1719:15833">
+                      <p className="absolute font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-medium inset-0 leading-[var(--line-height\/11,14px)] text-[11px] text-[color:var(--ios_color\/text\/t16,#00a555)] whitespace-nowrap" data-node-id="I1:2084;1776:7385;1719:15844;1719:15833">
                         광고보고 무료
                       </p>
                     </div>
@@ -1169,13 +1169,13 @@ export default function Component() {
                           <img alt="" className="absolute block max-w-none size-full" src={imgRankDown} />
                         </div>
                       </div>
-                      <p className="font-[family-name:var(--family,'Pretendard:Bold',sans-serif)] font-[var(--wieght\/700,normal)] leading-[var(--line-height\/10,13px)] relative shrink-0 text-[#909090] text-[10px] whitespace-nowrap" data-node-id="I1:2085;1776:8571;1719:15849;96:4612">
+                      <p className="font-[family-name:var(--family,'Pretendard:Bold',sans-serif)] font-bold leading-[var(--line-height\/10,13px)] relative shrink-0 text-[#909090] text-[10px] whitespace-nowrap" data-node-id="I1:2085;1776:8571;1719:15849;96:4612">
                         2
                       </p>
                     </div>
                   </div>
                   <div className="content-stretch flex flex-col gap-px items-start relative shrink-0" data-name="Layout" data-node-id="I1:2085;1776:7385">
-                    <div className="content-stretch flex flex-col font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-[var(--wieght\/500,normal)] gap-px items-start leading-[var(--line-height\/13,17px)] relative shrink-0 text-[13px] text-[color:var(--text\/t01,#121212)] tracking-[-0.15px] w-[109px]" data-name="Layout" data-node-id="I1:2085;1776:7385;1719:15843">
+                    <div className="content-stretch flex flex-col font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-medium gap-px items-start leading-[var(--line-height\/13,17px)] relative shrink-0 text-[13px] text-[color:var(--text\/t01,#121212)] tracking-[-0.15px] w-[109px]" data-name="Layout" data-node-id="I1:2085;1776:7385;1719:15843">
                       <p className="h-[17px] relative shrink-0 w-[109px]" data-node-id="I1:2085;1776:7385;1719:15843;1719:15865">
                         게임속 바바리안
                       </p>
@@ -1184,7 +1184,7 @@ export default function Component() {
                       </p>
                     </div>
                     <div className="h-[14px] relative shrink-0 w-[78.969px]" data-name="sub info" data-node-id="I1:2085;1776:7385;1719:15844">
-                      <p className="absolute font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-[var(--wieght\/500,normal)] inset-0 leading-[var(--line-height\/11,14px)] text-[11px] text-[color:var(--ios_color\/text\/t16,#00a555)] whitespace-nowrap" data-node-id="I1:2085;1776:7385;1719:15844;1719:15833">
+                      <p className="absolute font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-medium inset-0 leading-[var(--line-height\/11,14px)] text-[11px] text-[color:var(--ios_color\/text\/t16,#00a555)] whitespace-nowrap" data-node-id="I1:2085;1776:7385;1719:15844;1719:15833">
                         광고보고 무료
                       </p>
                     </div>
@@ -1271,7 +1271,7 @@ export default function Component() {
                           <img alt="" className="absolute block max-w-none size-full" src={imgRankUp} />
                         </div>
                       </div>
-                      <p className="font-[family-name:var(--family,'Pretendard:Bold',sans-serif)] font-[var(--wieght\/700,normal)] leading-[var(--line-height\/10,13px)] relative shrink-0 text-[10px] text-[color:var(--ios_color\/primary\/p04,#ff2f5d)] whitespace-nowrap" data-node-id="I1:2086;1776:8571;1719:15849;96:4606">
+                      <p className="font-[family-name:var(--family,'Pretendard:Bold',sans-serif)] font-bold leading-[var(--line-height\/10,13px)] relative shrink-0 text-[10px] text-[color:var(--ios_color\/primary\/p04,#ff2f5d)] whitespace-nowrap" data-node-id="I1:2086;1776:8571;1719:15849;96:4606">
                         20
                       </p>
                     </div>
@@ -1280,16 +1280,16 @@ export default function Component() {
                     <div className="content-stretch flex flex-col gap-px items-start relative shrink-0 w-[109px]" data-name="Layout" data-node-id="I1:2086;1776:7385;1719:15843">
                       <div className="content-stretch flex gap-[3px] items-center relative shrink-0 w-full" data-node-id="I1:2086;1776:7385;1719:15843;1719:15852">
                         <Badge className="relative shrink-0 size-[14px]" property1="19+" />
-                        <p className="font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-[var(--wieght\/500,normal)] leading-[var(--line-height\/13,17px)] overflow-hidden relative shrink-0 text-[13px] text-[color:var(--ios_color\/text\/t01,#121212)] text-ellipsis tracking-[-0.15px] w-[81px] whitespace-nowrap" data-node-id="I1:2086;1776:7385;1719:15843;1719:15855">
+                        <p className="font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-medium leading-[var(--line-height\/13,17px)] overflow-hidden relative shrink-0 text-[13px] text-[color:var(--ios_color\/text\/t01,#121212)] text-ellipsis tracking-[-0.15px] w-[81px] whitespace-nowrap" data-node-id="I1:2086;1776:7385;1719:15843;1719:15855">
                           게임속 바바리안
                         </p>
                       </div>
-                      <p className="font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-[var(--wieght\/500,normal)] leading-[var(--line-height\/13,17px)] overflow-hidden relative shrink-0 text-[13px] text-[color:var(--ios_color\/text\/t01,#121212)] text-ellipsis tracking-[-0.15px] w-full whitespace-nowrap" data-node-id="I1:2086;1776:7385;1719:15843;1719:15856">
+                      <p className="font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-medium leading-[var(--line-height\/13,17px)] overflow-hidden relative shrink-0 text-[13px] text-[color:var(--ios_color\/text\/t01,#121212)] text-ellipsis tracking-[-0.15px] w-full whitespace-nowrap" data-node-id="I1:2086;1776:7385;1719:15843;1719:15856">
                         으로 살아남기
                       </p>
                     </div>
                     <div className="h-[14px] relative shrink-0 w-[78.969px]" data-name="sub info" data-node-id="I1:2086;1776:7385;1719:15844">
-                      <p className="absolute font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-[var(--wieght\/500,normal)] inset-0 leading-[var(--line-height\/11,14px)] text-[11px] text-[color:var(--ios_color\/text\/t16,#00a555)] whitespace-nowrap" data-node-id="I1:2086;1776:7385;1719:15844;1719:15833">
+                      <p className="absolute font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-medium inset-0 leading-[var(--line-height\/11,14px)] text-[11px] text-[color:var(--ios_color\/text\/t16,#00a555)] whitespace-nowrap" data-node-id="I1:2086;1776:7385;1719:15844;1719:15833">
                         광고보고 무료
                       </p>
                     </div>
@@ -1376,7 +1376,7 @@ export default function Component() {
                           <img alt="" className="absolute block max-w-none size-full" src={imgRankUp} />
                         </div>
                       </div>
-                      <p className="font-[family-name:var(--family,'Pretendard:Bold',sans-serif)] font-[var(--wieght\/700,normal)] leading-[var(--line-height\/10,13px)] relative shrink-0 text-[10px] text-[color:var(--ios_color\/primary\/p04,#ff2f5d)] whitespace-nowrap" data-node-id="I1:2087;1776:8571;1719:15849;96:4606">
+                      <p className="font-[family-name:var(--family,'Pretendard:Bold',sans-serif)] font-bold leading-[var(--line-height\/10,13px)] relative shrink-0 text-[10px] text-[color:var(--ios_color\/primary\/p04,#ff2f5d)] whitespace-nowrap" data-node-id="I1:2087;1776:8571;1719:15849;96:4606">
                         20
                       </p>
                     </div>
@@ -1385,16 +1385,16 @@ export default function Component() {
                     <div className="content-stretch flex flex-col gap-px items-start relative shrink-0 w-[109px]" data-name="Layout" data-node-id="I1:2087;1776:7385;1719:15843">
                       <div className="content-stretch flex gap-[3px] items-center relative shrink-0 w-full" data-node-id="I1:2087;1776:7385;1719:15843;1719:15852">
                         <Badge className="relative shrink-0 size-[14px]" property1="19+" />
-                        <p className="font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-[var(--wieght\/500,normal)] leading-[var(--line-height\/13,17px)] overflow-hidden relative shrink-0 text-[13px] text-[color:var(--ios_color\/text\/t01,#121212)] text-ellipsis tracking-[-0.15px] w-[81px] whitespace-nowrap" data-node-id="I1:2087;1776:7385;1719:15843;1719:15855">
+                        <p className="font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-medium leading-[var(--line-height\/13,17px)] overflow-hidden relative shrink-0 text-[13px] text-[color:var(--ios_color\/text\/t01,#121212)] text-ellipsis tracking-[-0.15px] w-[81px] whitespace-nowrap" data-node-id="I1:2087;1776:7385;1719:15843;1719:15855">
                           게임속 바바리안
                         </p>
                       </div>
-                      <p className="font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-[var(--wieght\/500,normal)] leading-[var(--line-height\/13,17px)] overflow-hidden relative shrink-0 text-[13px] text-[color:var(--ios_color\/text\/t01,#121212)] text-ellipsis tracking-[-0.15px] w-full whitespace-nowrap" data-node-id="I1:2087;1776:7385;1719:15843;1719:15856">
+                      <p className="font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-medium leading-[var(--line-height\/13,17px)] overflow-hidden relative shrink-0 text-[13px] text-[color:var(--ios_color\/text\/t01,#121212)] text-ellipsis tracking-[-0.15px] w-full whitespace-nowrap" data-node-id="I1:2087;1776:7385;1719:15843;1719:15856">
                         으로 살아남기
                       </p>
                     </div>
                     <div className="h-[14px] relative shrink-0 w-[78.969px]" data-name="sub info" data-node-id="I1:2087;1776:7385;1719:15844">
-                      <p className="absolute font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-[var(--wieght\/500,normal)] inset-0 leading-[var(--line-height\/11,14px)] text-[11px] text-[color:var(--ios_color\/text\/t16,#00a555)] whitespace-nowrap" data-node-id="I1:2087;1776:7385;1719:15844;1719:15833">
+                      <p className="absolute font-[family-name:var(--family,'Pretendard:Medium',sans-serif)] font-medium inset-0 leading-[var(--line-height\/11,14px)] text-[11px] text-[color:var(--ios_color\/text\/t16,#00a555)] whitespace-nowrap" data-node-id="I1:2087;1776:7385;1719:15844;1719:15833">
                         광고보고 무료
                       </p>
                     </div>
@@ -1602,8 +1602,41 @@ export default function Component() {
         <div className="bg-white h-[34px] relative shrink-0 w-[375px]" data-name="🧰/Home Indicator (iPhone)" data-node-id="1:2091">
           <div className="-translate-x-1/2 absolute bg-black bottom-[8px] h-[5px] left-1/2 rounded-[100px] w-[134px]" data-name="Home Indicator" data-node-id="I1:2091;24:1719" />
         </div>
+        {/* 스크롤 테스트용 추가 섹션 */}
+        {[
+          { title: "로맨스 베스트", sub: "이달의 인기작" },
+          { title: "판타지 TOP", sub: "지금 핫한 작품" },
+          { title: "무협 랭킹", sub: "전통 장르 강자" },
+          { title: "BL 추천", sub: "독자 평점 TOP" },
+          { title: "완결 특집", sub: "정주행하기 좋은" },
+        ].map((sec) => (
+          <div key={sec.title} className="mx-auto mt-[20px] w-full max-w-[375px]">
+            <div className="flex items-center justify-between px-[16px] mb-[12px]">
+              <div className="flex gap-[4px] items-center text-[17px] font-bold text-[#121212] tracking-[-0.17px]">
+                <span className="font-normal">{sec.sub}</span>
+                <span>{sec.title}</span>
+              </div>
+              <span className="text-[13px] text-[rgba(18,18,18,0.45)]">더보기 ›</span>
+            </div>
+            <div className="flex gap-[8px] overflow-x-auto pl-[16px] pb-[12px]">
+              {[imgImage, imgImage1, imgImage2, imgImage3, imgImage18, imgImage20, imgImage23].map((src, i) => (
+                <div key={i} className="shrink-0 flex flex-col gap-[6px]">
+                  <div className="w-[109px] aspect-[109/158] rounded-[4px] overflow-hidden relative">
+                    <img src={src} className="absolute inset-0 w-full h-full object-cover" alt="" />
+                    <div className="absolute top-0 left-0 bg-black/60 text-white font-['Avenir_Next:Bold',sans-serif] font-bold text-[29px] leading-[25px] px-[6px] pt-[4px] tracking-[-1px]">{i + 1}</div>
+                  </div>
+                  <div className="w-[109px]">
+                    <p className="text-[13px] font-medium text-[#121212] truncate tracking-[-0.15px]">작품 제목 {i + 1}</p>
+                    <p className="text-[11px] text-[#00a555]">광고보고 무료</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+        <div className="h-[40px]" />
       </div>
-      <div className="fixed bg-[var(--primary/p01,black)] h-[130px] left-0 right-0 top-0 z-50 max-w-[375px] mx-auto" data-name="Navi" data-node-id="1:2092">
+      <div className="fixed bg-black h-[130px] left-0 right-0 top-0 z-50" data-name="Navi" data-node-id="1:2092">
         <div className="absolute bg-[var(--primary\/p01,black)] h-[50px] left-0 overflow-clip right-0 top-0" data-name="Statusbar" data-node-id="1:2093">
           <ElementSystemIOsNotch className="absolute h-[30px] left-0 right-0 top-[2px]" visible={false} />
           <div className="absolute content-stretch flex gap-[4px] items-center right-[14px] top-[18px]" data-name="Status Icons" data-node-id="I1:2093;1:504">

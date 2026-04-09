@@ -4,9 +4,13 @@ const TOTAL_FRAMES = 208
 const FPS = 24
 const BASE = import.meta.env.BASE_URL
 
-// 200x200 프레임 기준 하단 투명 7% → 캔버스 100px 기준 7px
-// 고양이 바닥을 원 바닥에 맞추려면 캔버스를 7px 올려야 함
-const BOTTOM_OFFSET = 7
+// 프레임: 200x200, 하단 투명 패딩 7% (14px)
+// 원: 58x58px
+// 목표: 고양이 body 바닥 = 원 바닥, 머리는 원 위로 삐져나옴
+// canvas=80 → content=80*0.93=74.4px, 원 위로 74.4-58=16.4px 돌출
+// bottom_offset = 80*0.07 = 5.6 → 반올림 6px
+const CANVAS_SIZE = 80
+const BOTTOM_OFFSET = Math.round(CANVAS_SIZE * 0.07)
 
 export default function FloatingCat() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -51,19 +55,17 @@ export default function FloatingCat() {
     return () => cancelAnimationFrame(rafRef.current)
   }, [])
 
-  const CANVAS_SIZE = 100
-
   return (
     <div style={{
       position: 'fixed',
       bottom: 94,
       right: 20,
       width: 63,
-      height: 58 + (CANVAS_SIZE - 58) / 2,
+      height: 58 + CANVAS_SIZE - BOTTOM_OFFSET,
       zIndex: 100,
       cursor: 'pointer',
     }}>
-      {/* 초록 원 배경 */}
+      {/* 초록 원 배경 - shadow 없음 */}
       <div style={{
         position: 'absolute',
         bottom: 0,
@@ -74,9 +76,8 @@ export default function FloatingCat() {
         borderRadius: '50%',
         background: '#00dc64',
         border: '1px solid rgba(0,0,0,0.05)',
-        boxShadow: '0 4px 12px rgba(0,220,100,0.4)',
       }} />
-      {/* 고양이 캔버스: 바닥 투명 패딩만큼 내려서 원 bottom에 정렬 */}
+      {/* 고양이 캔버스: bottom_offset만큼 내려서 원 bottom에 정렬 */}
       <canvas
         ref={canvasRef}
         width={CANVAS_SIZE * 2}

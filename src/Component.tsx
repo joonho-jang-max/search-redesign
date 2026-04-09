@@ -985,8 +985,8 @@ export default function Component() {
           </div>
         </div>
         <div className="content-stretch flex flex-col gap-[30px] items-center relative shrink-0 w-full" data-name="Body" data-node-id="1:2080">
-          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[375px]" data-name="Ranking/now" data-node-id="1:2081">
-            <div className="h-[36px] overflow-clip relative shrink-0 w-[375px]" data-name="Special" data-node-id="1:2082">
+          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Ranking/now" data-node-id="1:2081">
+            <div className="h-[36px] overflow-clip relative shrink-0 w-full" data-name="Special" data-node-id="1:2082">
               <div className="absolute bottom-[14px] content-stretch flex gap-[8px] items-end left-0 pl-[var(--padding\/m,16px)] pr-[var(--padding\/s,12px)] right-0" data-name="Content" data-node-id="I1:2082;8191:235519">
                 <div className="content-stretch flex flex-[1_0_0] gap-[4px] items-center leading-[22px] min-h-px min-w-px not-italic relative text-[17px] text-[color:var(--ios_color\/text\/t01,#121212)] tracking-[-0.17px] whitespace-nowrap" data-name="Text" data-node-id="I1:2082;81:12017">
                   <p className="font-['Apple_SD_Gothic_Neo:Regular',sans-serif] relative shrink-0" data-node-id="I1:2082;81:12018">
@@ -1004,7 +1004,7 @@ export default function Component() {
                 </div>
               </div>
             </div>
-            <div className="content-stretch flex gap-[8px] items-start overflow-clip pl-[16px] relative shrink-0 w-[476px]" data-name="List" data-node-id="1:2083">
+            <div className="content-stretch flex gap-[8px] items-start overflow-x-auto pl-[16px] pb-[8px] relative shrink-0 w-full" data-name="List" data-node-id="1:2083">
               <div className="content-stretch flex flex-col items-start pb-[10px] relative shrink-0 w-[109px]" data-name="Item/Vertical/Ranking" data-node-id="1:2084">
                 <div className="aspect-[109/158] mb-[-10px] overflow-clip relative rounded-[4px] shrink-0 w-full" data-name="Portrait" data-node-id="I1:2084;1715:7359">
                   <div className="absolute contents left-[-5px] top-[-6px]" data-name="img" data-node-id="I1:2084;1715:7359;1431:368">
@@ -1450,8 +1450,8 @@ export default function Component() {
           </div>
         </div>
       </div>
-      <div className="absolute bg-white bottom-0 content-stretch flex flex-col items-start left-0 w-[375px]" data-name="GNB" data-node-id="1:2089">
-        <div className="bg-[var(--ios_color\/bg\/b12,white)] h-[50px] relative shrink-0 w-[375px]" data-name="Toolbar" data-node-id="1:2090">
+      <div className="absolute bg-white bottom-0 content-stretch flex flex-col items-start left-0 right-0" data-name="GNB" data-node-id="1:2089">
+        <div className="bg-[var(--ios_color/bg/b12,white)] h-[50px] relative shrink-0 w-full" data-name="Toolbar" data-node-id="1:2090">
           <div className="-translate-y-1/2 absolute content-stretch flex items-end justify-center left-0 right-0 top-1/2" data-name="Menu" data-node-id="I1:2090;3242:130356">
             <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-center justify-center min-h-px min-w-px relative" data-name="Nav/toolbar" data-node-id="I1:2090;1419:34787">
               <ToolbarIcNavbarHome className="relative shrink-0 size-[22px]" />
@@ -1599,7 +1599,7 @@ export default function Component() {
             </div>
           </div>
         </div>
-        <div className="bg-white h-[34px] relative shrink-0 w-[375px]" data-name="🧰/Home Indicator (iPhone)" data-node-id="1:2091">
+        <div className="bg-white h-[34px] relative shrink-0 w-full" data-name="🧰/Home Indicator (iPhone)" data-node-id="1:2091">
           <div className="-translate-x-1/2 absolute bg-black bottom-[8px] h-[5px] left-1/2 rounded-[100px] w-[134px]" data-name="Home Indicator" data-node-id="I1:2091;24:1719" />
         </div>
         {/* 스크롤 테스트용 추가 섹션 */}

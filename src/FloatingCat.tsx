@@ -4,13 +4,17 @@ const TOTAL_FRAMES = 208
 const FPS = 24
 const BASE = import.meta.env.BASE_URL
 
-// 프레임: 200x200, 하단 투명 패딩 7% (14px)
-// 원: 58x58px
-// 목표: 고양이 body 바닥 = 원 바닥, 머리는 원 위로 삐져나옴
-// canvas=80 → content=80*0.93=74.4px, 원 위로 74.4-58=16.4px 돌출
-// bottom_offset = 80*0.07 = 5.6 → 반올림 6px
-const CANVAS_SIZE = 80
-const BOTTOM_OFFSET = Math.round(CANVAS_SIZE * 0.07)
+// 200x200 기준: 상단 투명 15.5%, 하단 투명 7%, 머리-몸통 경계 42.5%
+// 원: 58x58
+// 캔버스 크기 계산:
+//   (1 - 0.07 - 0.425) * CANVAS = 58 → CANVAS = 58 / 0.505 ≈ 115px
+// 결과: 머리-몸통 경계가 원 상단과 정확히 일치, 머리는 위로 ~31px 돌출
+const CANVAS_SIZE = 115
+const BOTTOM_OFFSET = Math.round(CANVAS_SIZE * 0.07) // 8px
+const CIRCLE_R = 29   // 58px diameter
+// canvas y좌표(px): 원 중심 = 원상단 + R = (CANVAS_SIZE-BOTTOM_OFFSET-58) + R
+const CIRCLE_CY = (CANVAS_SIZE - BOTTOM_OFFSET - 58) + CIRCLE_R  // ≈ 78
+const HEAD_END_Y = CANVAS_SIZE * 0.425  // ≈ 49 (= 원상단과 일치)
 
 export default function FloatingCat() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -22,6 +26,8 @@ export default function FloatingCat() {
   useEffect(() => {
     const canvas = canvasRef.current!
     const ctx = canvas.getContext('2d')!
+    const W = CANVAS_SIZE * 2  // 2x retina
+    const H = CANVAS_SIZE * 2
     const frames: HTMLImageElement[] = []
 
     for (let i = 0; i < TOTAL_FRAMES; i++) {
@@ -39,11 +45,26 @@ export default function FloatingCat() {
     let last = 0
     const interval = 1000 / FPS
 
+    function draw(img: HTMLImageElement) {
+      ctx.clearRect(0, 0, W, H)
+      ctx.save()
+
+      // 클리핑: 머리 영역(직사각형) + 원 영역 = UNION
+      ctx.beginPath()
+      // 머리 부분: canvas 상단부터 원 상단까지 (full width)
+      ctx.rect(0, 0, W, HEAD_END_Y * 2)
+      // 몸통/쿠키: 원형 클리핑
+      ctx.arc(W / 2, CIRCLE_CY * 2, CIRCLE_R * 2, 0, Math.PI * 2)
+      ctx.clip()
+
+      ctx.drawImage(img, 0, 0, W, H)
+      ctx.restore()
+    }
+
     function startLoop() {
       function tick(ts: number) {
         if (ts - last >= interval) {
-          ctx.clearRect(0, 0, canvas.width, canvas.height)
-          ctx.drawImage(imagesRef.current[frameRef.current], 0, 0, canvas.width, canvas.height)
+          draw(imagesRef.current[frameRef.current])
           frameRef.current = (frameRef.current + 1) % TOTAL_FRAMES
           last = ts
         }
@@ -61,11 +82,11 @@ export default function FloatingCat() {
       bottom: 94,
       right: 20,
       width: 63,
-      height: 58 + CANVAS_SIZE - BOTTOM_OFFSET,
+      height: CANVAS_SIZE - BOTTOM_OFFSET,
       zIndex: 100,
       cursor: 'pointer',
     }}>
-      {/* 초록 원 배경 - shadow 없음 */}
+      {/* 초록 원 배경 (shadow 없음) */}
       <div style={{
         position: 'absolute',
         bottom: 0,
@@ -77,7 +98,7 @@ export default function FloatingCat() {
         background: '#00dc64',
         border: '1px solid rgba(0,0,0,0.05)',
       }} />
-      {/* 고양이 캔버스: bottom_offset만큼 내려서 원 bottom에 정렬 */}
+      {/* 고양이 캔버스: 머리=원 위 돌출, 몸통/쿠키=원형 클리핑 */}
       <canvas
         ref={canvasRef}
         width={CANVAS_SIZE * 2}
